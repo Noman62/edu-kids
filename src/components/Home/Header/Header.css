@@ -1,0 +1,9 @@
+.header-main{
+    background-image: url("../../../Image/banner.jpg");
+    height: 550px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
