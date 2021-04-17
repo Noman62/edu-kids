@@ -7,6 +7,8 @@ import Login from "./components/Login/Login";
 import MeetTeacher from "./components/MeetTeacher/MeetTeacher";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import AddService from "./components/AddService/AddService";
+import Review from "./components/Home/Review/Review";
+import AddReview from "./components/AddReview/AddReview";
 
 export const UserContext = createContext();
 
@@ -27,6 +29,9 @@ function App() {
           </PrivateRoute>
           <Route path="/addService">
             <AddService></AddService>
+          </Route>
+          <Route path="/review">
+            <AddReview></AddReview>
           </Route>
           <Route path="/">
             <Home></Home>
