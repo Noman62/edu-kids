@@ -1,28 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ServiceInfo from "../ServiceInfo/ServiceInfo";
-import literacy from "../../../Image/literacy.jpg";
-import jennifer from "../../../Image/jennifer.jpg";
-import math from "../../../Image/math.jpg";
 
-const serviceData = [
-  {
-    image: literacy,
-    name: "Lily Carter",
-    subject: "Literacy Teacher",
-  },
-  {
-    image: jennifer,
-    name: "Jennifer Lawrence",
-    subject: "Mathematics Teacher",
-  },
-  {
-    image: math,
-    name: "Richard Hil",
-    subject: "Art And Music Teacher",
-  },
-];
+
+
 
 const Services = () => {
+  const [tutor,setTutor]=useState([]);
+  useEffect(()=>{
+    fetch('http://localhost:8080/service')
+    .then(res=>res.json())
+    .then(data=>setTutor(data));
+
+  },[])
   return (
     <section className="services-container mt-5">
       <div className="text-center ">
@@ -31,7 +20,7 @@ const Services = () => {
       </div>
       <div className="d-flex justify-content-center">
         <div className="w-75 row mt-2 pt-5">
-          {serviceData.map((service) => (
+          {tutor.map((service) => (
             <ServiceInfo service={service} key={service.name}></ServiceInfo>
           ))}
         </div>

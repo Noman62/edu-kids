@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Login from "./components/Login/Login";
 import MeetTeacher from "./components/MeetTeacher/MeetTeacher";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import AddService from "./components/AddService/AddService";
 
 export const UserContext = createContext();
 
@@ -21,9 +22,12 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <PrivateRoute path="/shipment">
+          <PrivateRoute path="/shipment/:name">
             <MeetTeacher></MeetTeacher>
           </PrivateRoute>
+          <Route path="/addService">
+            <AddService></AddService>
+          </Route>
           <Route path="/">
             <Home></Home>
           </Route>
