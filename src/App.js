@@ -10,6 +10,7 @@ import AddService from "./components/AddService/AddService";
 import AddReview from "./components/AddReview/AddReview";
 import SelectedTeacherList from "./components/SelectedTeacherList/SelectedTeacherList";
 import Admin from "./components/Admin/Admin";
+import AddAdmin from "./components/Admin/AddAdmin/AddAdmin";
 
 export const UserContext = createContext();
 
@@ -39,6 +40,9 @@ function App() {
           </Route>
           <Route path="/admin">
             <Admin></Admin>
+          </Route>
+          <Route path="/addAdmin">
+            <AddAdmin></AddAdmin>
           </Route>
           <Route path="/">
             <Home></Home>

@@ -8,7 +8,7 @@ const Admin = () => {
                <div class="sidenav">
                 <Link class="nav-link text-white" aria-current="page" to="/selectedTutor">Selected Teacher</Link>
                 <Link class="nav-link text-white" aria-current="page" to="/addService">Add Services</Link>
-                <Link class="nav-link text-white" aria-current="page" to="/review">Add Admin</Link>
+                <Link class="nav-link text-white" aria-current="page" to="/addAdmin">Add Admin</Link>
                </div>
            
         </div>
