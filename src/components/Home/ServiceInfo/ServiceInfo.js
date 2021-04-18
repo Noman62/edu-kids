@@ -3,11 +3,12 @@ import { useHistory } from "react-router";
 import { serviceData } from "../Services/Services";
 
 const ServiceInfo = (props) => {
-  const {name,imageURL}=props.service;
-  console.log(imageURL);
+  const {name,imageURL,_id}=props.service;
+  console.log(props.service);
+
   let history = useHistory();
-  const handleMeeting=(name)=>{
-    history.push(`/shipment/${name}`)
+  const handleMeeting=(id)=>{
+    history.push(`/shipment/${id}`)
   }
   
   return (
@@ -18,7 +19,7 @@ const ServiceInfo = (props) => {
           <div class="card-body">
             <h5 class="card-title">{name}</h5>
             <p class="card-text">Math</p>
-            <button  onClick={()=>handleMeeting(name)} className="btn btn-warning">Hire..</button>
+            <button  onClick={()=>handleMeeting(_id)} className="btn btn-warning">Hire..</button>
           </div>
         </div>
       </div>

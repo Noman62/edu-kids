@@ -24,7 +24,7 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <PrivateRoute path="/shipment/:name">
+          <PrivateRoute path="/shipment/:id">
             <MeetTeacher></MeetTeacher>
           </PrivateRoute>
           <Route path="/addService">

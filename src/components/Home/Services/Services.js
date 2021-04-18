@@ -7,7 +7,7 @@ import ServiceInfo from "../ServiceInfo/ServiceInfo";
 const Services = () => {
   const [tutor,setTutor]=useState([]);
   useEffect(()=>{
-    fetch('http://localhost:8080/service')
+    fetch('http://localhost:8080/allService')
     .then(res=>res.json())
     .then(data=>setTutor(data));
 
@@ -21,7 +21,7 @@ const Services = () => {
       <div className="d-flex justify-content-center">
         <div className="w-75 row mt-2 pt-5">
           {tutor.map((service) => (
-            <ServiceInfo service={service} key={service.name}></ServiceInfo>
+            <ServiceInfo service={service} key={service._id}></ServiceInfo>
           ))}
         </div>
       </div>
