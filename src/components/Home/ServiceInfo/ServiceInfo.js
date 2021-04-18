@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router";
-
+import './ServiceInfo.css';
 const ServiceInfo = (props) => {
   const {name,imageURL,_id}=props.service;
   console.log(props.service);
