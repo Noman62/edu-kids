@@ -1,6 +1,5 @@
 import React from "react";
 import { useHistory } from "react-router";
-import { serviceData } from "../Services/Services";
 
 const ServiceInfo = (props) => {
   const {name,imageURL,_id}=props.service;
@@ -14,7 +13,7 @@ const ServiceInfo = (props) => {
   return (
    
       <div className="col-md-4">
-        <div class="card" style={{ width: "18rem" }}>
+        <div class="card shadow p-3 mb-5 bg-body rounded" style={{ width: "18rem" }}>
           <img src={imageURL} alt="" />
           <div class="card-body">
             <h5 class="card-title">{name}</h5>

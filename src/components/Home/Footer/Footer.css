@@ -1,0 +1,9 @@
+.social-icon{
+    margin-left: 45%;
+}
+.main-footer img{
+    grid: row;
+    width: 50px;
+    padding: 10px;
+
+}

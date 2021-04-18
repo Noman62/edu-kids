@@ -7,9 +7,9 @@ import Login from "./components/Login/Login";
 import MeetTeacher from "./components/MeetTeacher/MeetTeacher";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import AddService from "./components/AddService/AddService";
-import Review from "./components/Home/Review/Review";
 import AddReview from "./components/AddReview/AddReview";
 import SelectedTeacherList from "./components/SelectedTeacherList/SelectedTeacherList";
+import Admin from "./components/Admin/Admin";
 
 export const UserContext = createContext();
 
@@ -36,6 +36,9 @@ function App() {
           </Route>
           <Route path="/selectedTutor">
             <SelectedTeacherList></SelectedTeacherList>
+          </Route>
+          <Route path="/admin">
+            <Admin></Admin>
           </Route>
           <Route path="/">
             <Home></Home>

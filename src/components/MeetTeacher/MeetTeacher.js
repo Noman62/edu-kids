@@ -1,8 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 import { UserContext } from "../../App";
 import ProcessPayment from "../ProcessPayment/ProcessPayment";
+
+
+import './MeatTeacher.css';
 
 const MeetTeacher = () => {
   const [user, setUser] = useState([]);
@@ -12,8 +16,9 @@ const MeetTeacher = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    data.price=user.price;
 
-    const url = `http://localhost:8080/addBooking`;
+    const url = `https://fast-wildwood-45255.herokuapp.com/addBooking`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -23,40 +28,47 @@ const MeetTeacher = () => {
     }).then((res) => {
       if (res) {
         console.log("server side response");
-        alert("submitted successfully");
+        alert(" Submitted Successful");
       }
     });
   };
 
   useEffect(() => {
-    fetch(`http://localhost:8080/service/${id}`)
+    fetch(`https://fast-wildwood-45255.herokuapp.com/service/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setUser(data);
-        console.log(data);
+       
       });
   }, []);
   return (
-    <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input
-          name="name"
-          defaultValue={loggedInUser.displayName}
-          ref={register}
-        />
-        <br />
-        <input name="email" defaultValue={loggedInUser.email} ref={register} />
-        <br />
-        <input name="teacher" defaultValue={user.name} ref={register} />
-        <br />
-        <div>
-          <p>Your service Charge Will be ${user.price}</p>
-          <ProcessPayment></ProcessPayment>
-        </div>
-        {errors.exampleRequired && <span>This field is required</span>}
-        <input type="submit" />
-      </form>
-    </div>
+   <div>
+        <div class="sidenav">
+                  <Link class="nav-link text-white" aria-current="page" to="/shipment">Meet Teacher</Link>
+                  <Link class="nav-link text-white" aria-current="page" to="/selectedTutor">Selected Teacher</Link>
+                  <Link class="nav-link text-white" aria-current="page" to="/review">Add Review</Link>
+          </div>
+        <div class="main border border-success shadow-sm p-3 mb-5 bg-body rounded" style={{marginLeft:'40%',marginTop:'10%',width:'600px'}}>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <input
+            name="name"
+            defaultValue={loggedInUser.displayName}
+            ref={register}
+          />
+          <br />
+          <input name="email" defaultValue={loggedInUser.email} ref={register} />
+          <br />
+          <input name="teacher" defaultValue={user.name} ref={register} />
+          <br />
+          <div>
+            <ProcessPayment></ProcessPayment>
+            <small>Your service Charge Will be {user.price}</small>
+          </div>
+          {errors.exampleRequired && <span>This field is required</span>}
+          <input type="submit" />
+        </form>
+      </div>
+   </div>
   );
 };
 
