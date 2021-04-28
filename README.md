@@ -2,10 +2,11 @@
 
 #Edu Kids
 
-#### Edu kids are very useful to users from the very first visit in browser tab,no install required,it loads quickly,It is a big news that for sports fans that anyone can to know any team lik detailes visiting tackle team app
 
 ##  feature:
-##### It is a responsive app fits for any form like desktop mobile tablet etc..I am using different feature in this app,One of them react router,,All component are linked using  react router,,I’m material UI And react boostrap,
-####Adding animation in card
+##### It is a child day care website, which serves some services like choosing classes for your child, meeting teacher, Enroll classes  etc.
+On this website, two types of people can log in or sign up here. One is admin and another is user. One cannot go to the dashboard page without login. After login, there are different dashboard options for users and admin
+Technology used : React.js, Node.js,css3, Express.js, MongoDB, Bootstrap4
+
 
 Live site:-https://edu-kids-6b851.web.app/
