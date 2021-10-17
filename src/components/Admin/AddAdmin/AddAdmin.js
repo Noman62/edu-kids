@@ -16,7 +16,7 @@ const AddAdmin = () => {
         const formData = new FormData()
         formData.append('email', info.email);
 
-        fetch('https://fast-wildwood-45255.herokuapp.com/isAdmin', {
+        fetch('https://hidden-peak-44578.herokuapp.com/isAdmin', {
             method: 'POST',
             body: formData
         })

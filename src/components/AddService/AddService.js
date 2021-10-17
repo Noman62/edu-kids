@@ -19,7 +19,7 @@ const AddService = () => {
             imageURL: imageURL
         };
 
-        const url = `https://fast-wildwood-45255.herokuapp.com/addService`;
+        const url = `https://hidden-peak-44578.herokuapp.com/addService`;
         fetch(url, {
             method: 'POST',
             headers: {

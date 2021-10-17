@@ -4,7 +4,7 @@ import ServiceInfo from "../ServiceInfo/ServiceInfo";
 const Services = () => {
   const [tutor, setTutor] = useState([]);
   useEffect(() => {
-    fetch("https://fast-wildwood-45255.herokuapp.com/allService")
+    fetch("https://hidden-peak-44578.herokuapp.com/allService")
       .then((res) => res.json())
       .then((data) => setTutor(data));
   }, []);

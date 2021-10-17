@@ -18,7 +18,7 @@ const MeetTeacher = () => {
     console.log(data);
     data.price=user.price;
 
-    const url = `https://fast-wildwood-45255.herokuapp.com/addBooking`;
+    const url = `https://hidden-peak-44578.herokuapp.com/addBooking`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -34,7 +34,7 @@ const MeetTeacher = () => {
   };
 
   useEffect(() => {
-    fetch(`https://fast-wildwood-45255.herokuapp.com/service/${id}`)
+    fetch(`https://hidden-peak-44578.herokuapp.com/service/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setUser(data);

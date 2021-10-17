@@ -7,7 +7,7 @@ const SelectedTeacherList = () => {
 const [selectedTeacher,setSelectedTeacher]=useState([]);
 const [loggedInUser, setLoggedInUser]=useContext(UserContext);
     useEffect(()=>{
-        fetch('https://fast-wildwood-45255.herokuapp.com/bookings?email='+loggedInUser.email)
+        fetch('https://hidden-peak-44578.herokuapp.com/bookings?email='+loggedInUser.email)
         .then(res=>res.json())
         .then(data=>setSelectedTeacher(data));
     

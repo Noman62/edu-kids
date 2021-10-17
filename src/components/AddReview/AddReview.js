@@ -16,7 +16,7 @@ const AddReview = () => {
             description: data.description
         };
 
-        const url = `http://localhost:8080/addReview`;
+        const url = `https://hidden-peak-44578.herokuapp.com/addReview`;
         fetch(url, {
             method: 'POST',
             headers: {
